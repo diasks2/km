@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 class RatesController < ApplicationController
+  before_filter :authenticate_user!
   def new
     @rate = Rate.new
   end
