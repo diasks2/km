@@ -1,0 +1,27 @@
+@import "bootstrap";
+
+body {
+  margin-top: 65px;
+}
+
+p {
+  font-family: 'Amatic SC', cursive;
+} 
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Qwigley', cursive; 
+}
+
+.center {
+  text-align: center;
+}  
+
+#home_sign_in {
+  margin-top: 20px;
+}
+
+#remember_me{
+  padding-top:10px;
+  margin-left:15px;
+  text-align: left;
+}
