@@ -8,4 +8,21 @@ module ApplicationHelper
       "#{base_title} | #{page_title}"
     end
   end
+
+  def string_rate
+    if rate = Rate.last.nil?
+    	0
+    else
+    	rate = Rate.last
+    	"%.2f" % rate.rate
+    end	
+  end
+
+  def rate
+    if rate = Rate.last.nil?
+    	0
+    else	
+    	rate.rate
+    end	
+  end
 end

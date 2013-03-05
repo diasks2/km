@@ -1,15 +1,18 @@
+$navbarLinkBackgroundActive: white;
+
 @import "bootstrap";
 
 body {
   margin-top: 65px;
 }
 
-p {
-  font-family: 'Amatic SC', cursive;
-} 
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Qwigley', cursive; 
+}
+
+.nav li {
+  font-family: 'Qwigley', cursive; 
+  font-size: 2.3em;
 }
 
 .center {
@@ -24,4 +27,17 @@ h1, h2, h3, h4, h5, h6 {
   padding-top:10px;
   margin-left:15px;
   text-align: left;
+}
+
+.nav li {
+  padding-top: 13px;
+}
+
+.nav > li.active {
+  padding-top: 13px;
+  background-color: none;
+}
+
+#exchage_rate{
+  padding-top: 25px;
 }

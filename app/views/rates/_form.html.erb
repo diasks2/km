@@ -1,0 +1,10 @@
+<%= form_for @rate do |f| %>
+	<%= render 'shared/error_messages', object: f.object %>
+	  
+	<%= f.hidden_field :currency, :value => "JPY" %>
+	<%= f.hidden_field :rate, :value => "", :id=> "exchange_rate_hidden" %>
+		  		
+	<div class="center">
+  		<%= f.submit "Save New Rate", :class => "btn btn-large btn-primary" %>
+  	</div>	
+<% end %>
