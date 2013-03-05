@@ -22,7 +22,17 @@ module ApplicationHelper
     if rate = Rate.last.nil?
     	0
     else	
+      rate = Rate.last
     	rate.rate
     end	
   end
+
+  def yen_to_dollar(amount)
+    if rate = Rate.last.nil?
+      0
+    else  
+      rate = Rate.last
+      amount / rate.rate
+    end 
+  end  
 end
