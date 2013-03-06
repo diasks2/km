@@ -1,27 +1,28 @@
 <% if signed_in? %>
-
-<h1 class="center">Wedding Date: Sunday, April 7th, 2013</h1>
-<h2 class="center"><%= link_to "Utsunomiya Grand Hotel, Utsunomiya City, Japan", "http://www.utsunomiya-grandhotel.co.jp/" %></h2>
-<br>
-<div class="center">
-    <iframe width="425" height="350" frameborder="0" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;q=utsunomiya+grand+hotel&amp;fb=1&amp;hq=grand+hotel&amp;hnear=0x601f666c9356803b:0xc9357749798654c2,Utsunomiya,+Tochigi+Prefecture,+Japan&amp;cid=0,0,14234790978201692145&amp;ll=36.542953,139.882941&amp;spn=0.006295,0.006295&amp;t=m&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;q=utsunomiya+grand+hotel&amp;fb=1&amp;hq=grand+hotel&amp;hnear=0x601f666c9356803b:0xc9357749798654c2,Utsunomiya,+Tochigi+Prefecture,+Japan&amp;cid=0,0,14234790978201692145&amp;ll=36.542953,139.882941&amp;spn=0.006295,0.006295&amp;t=m&amp;iwloc=A&amp;source=embed">View Larger Map</a></small>
-</div>
+  <h1 class="center">Wedding Date: Sunday, April 7th, 2013</h1>
+  <h2 class="center"><%= link_to "Utsunomiya Grand Hotel, Utsunomiya City, Japan", "http://www.utsunomiya-grandhotel.co.jp/" %></h2>
+  <br>
+  <div class="center">
+      <iframe width="425" height="350" frameborder="0" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;q=utsunomiya+grand+hotel&amp;fb=1&amp;hq=grand+hotel&amp;hnear=0x601f666c9356803b:0xc9357749798654c2,Utsunomiya,+Tochigi+Prefecture,+Japan&amp;cid=0,0,14234790978201692145&amp;ll=36.542953,139.882941&amp;spn=0.006295,0.006295&amp;t=m&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;q=utsunomiya+grand+hotel&amp;fb=1&amp;hq=grand+hotel&amp;hnear=0x601f666c9356803b:0xc9357749798654c2,Utsunomiya,+Tochigi+Prefecture,+Japan&amp;cid=0,0,14234790978201692145&amp;ll=36.542953,139.882941&amp;spn=0.006295,0.006295&amp;t=m&amp;iwloc=A&amp;source=embed">View Larger Map</a></small>
+  </div>
+  <br>
+  <br>
+  <div class="center">
+    <%= link_to(image_tag("cb_map.jpg", alt: "Cherry Blossom Map"), "http://www.jnto.go.jp/sakura/eng/index.php", :target => "_blank") %>
+  </div> 
 <% else %>
-
-<div class="row" id="home_sign_in">
-  <div class="span6 offset3">
-    <div class="center">
-  		<%= form_for("user", :url => user_session_path, :html => { :class => "well form-inline"}) do |f| %>
-			  	<%= f.text_field :email, :class => "input-medium", :placeholder => "Email", :id => "placeholder" %>
-			  	<%= f.password_field :password, :class => "input-medium", :placeholder => "Password", :id => "placeholder" %>
-			  	<%= f.submit "Sign In", :class => "m-btn purple rnd" %> 
-  		<% end %>
+  <div class="row" id="home_sign_in">
+    <div class="span6 offset3">
+      <div class="center">
+    		<%= form_for("user", :url => user_session_path, :html => { :class => "well form-inline"}) do |f| %>
+  			  	<%= f.text_field :email, :class => "input-medium", :placeholder => "Email", :id => "placeholder" %>
+  			  	<%= f.password_field :password, :class => "input-medium", :placeholder => "Password", :id => "placeholder" %>
+  			  	<%= f.submit "Sign In", :class => "m-btn purple rnd" %> 
+    		<% end %>
+      </div>
     </div>
   </div>
-</div>
-<div class="center">
-  <%= image_tag("kevmari.png", alt: "Kevin and Mari") %>
-</div>  
+  <div class="center">
+    <%= image_tag("kevmari.png", alt: "Kevin and Mari") %>
+  </div>  
 <% end %>
-
-
